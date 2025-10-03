@@ -1,6 +1,6 @@
-function gruopsName(arrOfGroup) {
-  const regex = /^(?:[A-Z]{2}20\d{2}(-\d+)?|[a-z]{2}20\d{2}(-\d+)?)$/;
-  return arrOfGroup.map((group) =>
+function gruopsNames(arrOfGroup) {
+  const regex = /^(FD|FE|FM)20\d{2}(?:-\d+)?$/;
+  return arrOfGroup.forEach((group) =>
     regex.test(group)
       ? console.log(`Success - ${group}`)
       : console.log(`Error - ${group}`)
@@ -19,4 +19,4 @@ const arrGroups = [
   "Fm2008-23",
   "FM2022-1",
 ];
-gruopsName(arrGroups);
+gruopsNames(arrGroups);
