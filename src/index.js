@@ -1,5 +1,5 @@
 function gruopsNames(arrOfGroup) {
-  const regex = /^(FD|FE|FM|fd|fe|fm)20\d{2}(?:-\d+)?$/;
+  const regex = /^(F[DEM]|f[dem])20\d{2}(?:-\d+)?$/;
   return arrOfGroup.forEach((group) =>
     regex.test(group)
       ? console.log(`Success - ${group}`)
